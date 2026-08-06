@@ -20,6 +20,26 @@ In modern agentic AI systems, graph databases serve as the foundational memory m
 
 ---
 
+### 📊 Visualizing Ingestion Throughput (Relationships / Second)
+
+The chart below highlights the massive performance variance between binary Bolt-protocol architectures and micro-chunked cloud layers under identical data strain.
+
+```mermaid
+gantt
+    title Ingestion Throughput (Higher is Better)
+    dateFormat  X
+    axisFormat %s R/s
+
+    section Bolt Protocol
+    Apache HugeGraph (Local Control) :active, 0, 14205
+    Neo4j Aura                      : 0, 9224
+    CognoDB                         : 0, 4923
+
+    section Transactional/In-Memory
+    Memgraph Cloud                  : 0, 137
+    FalkorDB Cloud                  : 0, 39
+```
+
 ## 🧠 Deep-Dive Architectural Analysis (What the Numbers Show)
 
 ### 💥 1. Ingestion Throughput: The Bolt Protocol Dominance
